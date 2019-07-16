@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.springboot</groupId>
+    <artifactId>spring-xhd</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--控制spring-boot版本信息-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.3.RELEASE</version>
+    </parent>
+    <properties>
+        <!--配置项目编码格式为UTF-8-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--配置jdk的版本为1.8-->
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <!--
+            引入springboot-web包
+            spring-boot-starter：spring-boot场景启动器，后面跟的单词就是场景，后面跟web,就是导入web场景的所有依赖
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+           <!-- <version>2.1.3.RELEASE</version>-->
+        </dependency>
+    </dependencies>
+</project>
