@@ -1,5 +1,6 @@
 package com.springboot.xhd.controller;
 
+import com.springboot.xhd.model.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController()
-public class HelloWorld {
+public class SpringCaseController {
     /**
      *@RequestMapping注释用于映射url到控制器类或一个特定的处理程序方法。可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。该注解共有6个属性
      * 1.value：指定请求的实际地址，指定的地址可以是URI Template 模式.
@@ -29,5 +30,18 @@ public class HelloWorld {
     @RequestMapping("/hello")
     public String hello(){
         return "hello";
+    }
+
+    /**
+     * 因为springboot内置了Jackson包，会将返回的对象自动序列化成json
+     * @return
+     */
+    @RequestMapping("/getUser")
+    public User getUser(){
+        User user = new User();
+        user.setAge(22);
+        user.setId(1);
+        user.setName("徐海东");
+        return user;
     }
 }
