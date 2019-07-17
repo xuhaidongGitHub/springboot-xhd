@@ -1,9 +1,24 @@
 package com.springboot.xhd.model;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
+import java.util.Date;
+
 public class User {
     private int id;
     private String name;
     private int age;
+
+    @JSONField(format = "yyyy-MM-dd HH-mm")
+    private Date createTime;
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 
     public int getId() {
         return id;

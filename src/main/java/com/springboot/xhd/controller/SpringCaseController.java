@@ -4,6 +4,8 @@ import com.springboot.xhd.model.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 /**
  * @RestController
  * 相当于@ResponseBody + @Controller
@@ -36,12 +38,14 @@ public class SpringCaseController {
      * 因为springboot内置了Jackson包，会将返回的对象自动序列化成json
      * @return
      */
+    //@RequestMapping(value = "/getUser" ,produces = "application/json; charset=utf-8")
     @RequestMapping("/getUser")
     public User getUser(){
         User user = new User();
         user.setAge(22);
         user.setId(1);
         user.setName("徐海东");
+        user.setCreateTime(new Date());
         return user;
     }
 }
